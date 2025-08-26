@@ -11,3 +11,4 @@
       action:
         run_playbook:
           name: playbooks/remediate_cpu.yml
+          inventory: inventories/inventory.yml
