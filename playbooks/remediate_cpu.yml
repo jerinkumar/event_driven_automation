@@ -5,4 +5,4 @@
   tasks:
     - name: Show remediation action
       ansible.builtin.debug:
-        msg: "Remediation triggered for {{ event.server }} due to {{ event.alert_type }} alert."
+        msg: "Remediation triggered for localhost due to high cpu alert."
