@@ -1,0 +1,15 @@
+---
+- name: Simulated Event Remediation
+  hosts: localhost
+  sources:
+    - ansible.eda.webhook:
+        port: 5000
+        host: 0.0.0.0
+  rules:
+    - name: High CPU Alert Rule
+      conditions:
+        - event.alert_type == "cpu_high"
+      actions:
+        - name: Trigger CPU Remediation Playbook
+          playbook: playbooks/remediate_cpu.yml
+    
